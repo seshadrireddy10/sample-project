@@ -26,3 +26,21 @@ jobs:
       - name: Directort Bash
         run: pwd
         shell: bash
+              
+jobs-1:
+    needs: jobs
+    run-shell-commands:
+    runs-on: ubuntu-latest
+    steps: 
+      - name: string
+        run: echo "Welcome to Devopshint!!"
+      - name: multiline script
+        run: |
+          node -v
+          npm -v
+      - name: python command
+        run: |
+          import platform
+          print(platform.processor())
+        shell: python
+
