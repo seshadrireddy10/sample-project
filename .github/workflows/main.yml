@@ -17,6 +17,11 @@ jobs:
           import platform
           print(platform.processor())
         shell: python
+      - name: multoline script
+        run: | 
+          python -v
+          pip -v 
+       
 
           
   
